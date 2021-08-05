@@ -1,0 +1,616 @@
+<?xml version="1.0" ?>
+<sdf version='1.7'>
+<model name='spot'>
+  <link name="body">
+    <inertial>
+      <mass>18.5</mass>
+      <!-- <inertia>
+        <ixx>0</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>0</iyy>
+        <iyz>0</iyz>
+        <izz>0</izz>
+      </inertia>
+      <pose>0 0 0 0 -0 0</pose> -->
+    </inertial>
+
+    <gravity>1</gravity>
+    <self_collide>1</self_collide>
+    <kinematic>0</kinematic>
+    <enable_wind>0</enable_wind>
+
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/body.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/body_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- <link name="base_link">
+    <joint name="base_link_joint" type="fixed">
+      <parent>body</parent>
+      <child>base_link</child>
+    </joint>
+  </link> -->
+
+  <!--
+  <link name="front_rail">
+    <pose>0.223 0 0.0805 0 0 0</pose>
+  </link>
+
+  <joint name="front_rail_joint" type="fixed">
+    <parent>body</parent>
+    <child>front_rail</child>
+  </joint>
+
+  <link name="rear_rail">
+    <pose>-0.223 0 0.0805 0 0 0</pose>
+  </link>
+
+  <joint name="rear_rail_joint" type="fixed">
+    <parent>body</parent>
+    <child>rear_rail</child>
+  </joint>
+  -->
+
+  <link name="front_left_hip">
+    <pose>0.29785 0.05500 0 0 0 0</pose>
+    <inertial>
+      <mass>2</mass>
+      <!-- <inertia>
+        <ixx>0</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>0</iyy>
+        <iyz>0</iyz>
+        <izz>0</izz>
+      </inertia>
+      <pose>0 0 0 0 -0 0</pose> -->
+    </inertial>
+
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <enable_wind>0</enable_wind>
+
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/front_left_hip.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/front_left_hip_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="front_left_hip_x" type="revolute">
+    <parent>body</parent>
+    <child>front_left_hip</child>
+    <axis>
+      <xyz>1 0 0</xyz>
+      <limit>
+        <effort>1000</effort>
+        <velocity>1000.00</velocity>
+        <lower>-0.78539816339744827899</lower>
+        <upper>0.78539816339744827899</upper>
+      </limit>
+    </axis>
+  </joint>
+
+  <link name="front_left_upper_leg">
+    <pose>0 0.110945 0.0 0 0 0</pose>
+    <inertial>
+      <mass>1.0</mass>
+    </inertial>
+
+    <gravity>1</gravity>
+    <self_collide>1</self_collide>
+    <kinematic>0</kinematic>
+    <enable_wind>0</enable_wind>
+
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/front_left_upper_leg.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/front_left_upper_leg_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="front_left_hip_y" type="revolute">
+    <parent>front_left_hip</parent>
+    <child>front_left_upper_leg</child>
+    <axis>
+      <xyz>0 1 0</xyz>
+      <limit>
+        <effort>1000</effort>
+        <velocity>1000.00</velocity>
+        <lower>-0.89884456477707963539</lower>
+        <upper>2.2951079663725435509</upper>
+      </limit>
+    </axis>
+  </joint>
+
+  <link name="front_left_lower_leg">
+    <pose>0.025 0 -0.3205 0 0 0</pose>
+    <inertial>
+      <mass>0.5</mass>
+    </inertial>
+
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <enable_wind>0</enable_wind>
+
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/front_left_lower_leg.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/front_left_lower_leg_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="front_left_knee" type="revolute">
+    <parent>front_left_upper_leg</parent>
+    <child>front_left_lower_leg</child>
+    <axis>
+      <xyz>0 1 0</xyz>
+      <limit>
+        <effort>1000</effort>
+        <velocity>1000.00</velocity>
+        <lower>-2.7929</lower>
+        <upper>-0.254801</upper>
+      </limit>
+    </axis>
+  </joint>
+
+  <link name="front_right_hip">
+    <pose>0.29785 -0.05500 0 0 0 0</pose>
+    <inertial>
+      <mass>2</mass>
+      <!-- <inertia>
+        <ixx>0</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>0</iyy>
+        <iyz>0</iyz>
+        <izz>0</izz>
+      </inertia>
+      <pose>0 0 0 0 -0 0</pose> -->
+    </inertial>
+
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <enable_wind>0</enable_wind>
+
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/front_right_hip.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/front_right_hip_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="front_right_hip_x" type="revolute">
+    <parent>body</parent>
+    <child>front_right_hip</child>
+    <axis>
+      <xyz>1 0 0</xyz>
+      <limit>
+        <effort>1000</effort>
+        <velocity>1000.00</velocity>
+        <lower>-0.78539816339744827899</lower>
+        <upper>0.78539816339744827899</upper>
+      </limit>
+    </axis>
+  </joint>
+
+  <link name="front_right_upper_leg">
+    <pose>0.0 -0.110945 0.0 0 0 0</pose>
+    <inertial>
+      <mass>1.0</mass>
+    </inertial>
+
+    <gravity>1</gravity>
+    <self_collide>1</self_collide>
+    <kinematic>0</kinematic>
+    <enable_wind>0</enable_wind>
+
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/front_right_upper_leg.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/front_right_upper_leg_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="front_right_hip_y" type="revolute">
+    <parent>front_right_hip</parent>
+    <child>front_right_upper_leg</child>
+    <axis>
+      <xyz>0 1 0</xyz>
+      <limit>
+        <effort>1000</effort>
+        <velocity>1000.00</velocity>
+        <lower>-0.89884456477707963539</lower>
+        <upper>2.2951079663725435509</upper>
+      </limit>
+    </axis>
+  </joint>
+
+  <link name="front_right_lower_leg">
+    <pose>0.025 0 -0.3205 0 0 0</pose>
+    <inertial>
+      <mass>0.5</mass>
+    </inertial>
+
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <enable_wind>0</enable_wind>
+
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/front_right_lower_leg.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/front_right_lower_leg_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="front_right_knee" type="revolute">
+    <parent>front_right_upper_leg</parent>
+    <child>front_right_lower_leg</child>
+    <axis>
+      <xyz>0 1 0</xyz>
+      <limit>
+        <effort>1000</effort>
+        <velocity>1000.00</velocity>
+        <lower>-2.7929</lower>
+        <upper>-0.247563</upper>
+      </limit>
+    </axis>
+  </joint>
+
+  <link name="rear_left_hip">
+    <pose>-0.29785 0.05500 0 0 0 0</pose>
+    <inertial>
+      <mass>2</mass>
+      <!-- <inertia>
+        <ixx>0</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>0</iyy>
+        <iyz>0</iyz>
+        <izz>0</izz>
+      </inertia>
+      <pose>0 0 0 0 -0 0</pose> -->
+    </inertial>
+
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <enable_wind>0</enable_wind>
+
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/rear_left_hip.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/rear_left_hip_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="rear_left_hip_x" type="revolute">
+    <parent>body</parent>
+    <child>rear_left_hip</child>
+    <axis>
+      <xyz>1 0 0</xyz>
+      <limit>
+        <effort>1000</effort>
+        <velocity>1000.00</velocity>
+        <lower>-0.78539816339744827899</lower>
+        <upper>0.78539816339744827899</upper>
+      </limit>
+    </axis>
+  </joint>
+
+  <link name="rear_left_upper_leg">
+    <pose>0.0 0.110945 0.0 0 0 0</pose>
+    <inertial>
+      <mass>1.0</mass>
+    </inertial>
+
+    <gravity>1</gravity>
+    <self_collide>1</self_collide>
+    <kinematic>0</kinematic>
+    <enable_wind>0</enable_wind>
+
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/rear_left_upper_leg.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/rear_left_upper_leg_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="rear_left_hip_y" type="revolute">
+    <parent>rear_left_hip</parent>
+    <child>rear_left_upper_leg</child>
+    <axis>
+      <xyz>0 1 0</xyz>
+      <limit>
+        <effort>1000</effort>
+        <velocity>1000.00</velocity>
+        <lower>-0.89884456477707963539</lower>
+        <upper>2.2951079663725435509</upper>
+      </limit>
+    </axis>
+  </joint>
+
+  <link name="rear_left_lower_leg">
+    <pose>0.025 0 -0.3205 0 0 0</pose>
+    <inertial>
+      <mass>0.5</mass>
+    </inertial>
+
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <enable_wind>0</enable_wind>
+
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/rear_left_lower_leg.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/rear_left_lower_leg_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="rear_left_knee" type="revolute">
+    <parent>rear_left_upper_leg</parent>
+    <child>rear_left_lower_leg</child>
+    <axis>
+      <xyz>0 1 0</xyz>
+      <limit>
+        <effort>1000</effort>
+        <velocity>1000.00</velocity>
+        <lower>-2.7929</lower>
+        <upper>-0.267153</upper>
+      </limit>
+    </axis>
+  </joint>
+
+  <link name="rear_right_hip">
+    <pose>-0.29785 -0.05500 0 0 0 0</pose>
+    <inertial>
+      <mass>2</mass>
+    </inertial>
+
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <enable_wind>0</enable_wind>
+
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/rear_right_hip.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/rear_right_hip_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="rear_right_hip_x" type="revolute">
+    <parent>body</parent>
+    <child>rear_right_hip</child>
+    <axis>
+      <xyz>1 0 0</xyz>
+      <limit>
+        <effort>1000</effort>
+        <velocity>1000.00</velocity>
+        <lower>-0.78539816339744827899</lower>
+        <upper>0.78539816339744827899</upper>
+      </limit>
+    </axis>
+  </joint>
+
+  <link name="rear_right_upper_leg">
+    <pose>0.0 -0.110945 0.0 0 0 0</pose>
+    <inertial>
+      <mass>1.0</mass>
+    </inertial>
+
+    <gravity>1</gravity>
+    <self_collide>1</self_collide>
+    <kinematic>0</kinematic>
+    <enable_wind>0</enable_wind>
+
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/rear_right_upper_leg.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/rear_right_upper_leg_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="rear_right_hip_y" type="revolute">
+    <parent>rear_right_hip</parent>
+    <child>rear_right_upper_leg</child>
+    <axis>
+      <xyz>0 1 0</xyz>
+      <limit>
+        <effort>1000</effort>
+        <velocity>1000.00</velocity>
+        <lower>-0.89884456477707963539</lower>
+        <upper>2.2951079663725435509</upper>
+      </limit>
+    </axis>
+  </joint>
+
+  <link name="rear_right_lower_leg">
+    <pose>0.025 0 -0.3205 0 0 0</pose>
+    <inertial>
+      <mass>0.5</mass>
+    </inertial>
+
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <enable_wind>0</enable_wind>
+
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/rear_right_lower_leg.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot/meshes/rear_right_lower_leg_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="rear_right_knee" type="revolute">
+    <parent>rear_right_upper_leg</parent>
+    <child>rear_right_lower_leg</child>
+    <axis>
+      <xyz>0 1 0</xyz>
+      <limit>
+        <effort>1000</effort>
+        <velocity>1000.00</velocity>
+        <lower>-2.7929</lower>
+        <upper>-0.257725</upper>
+      </limit>
+    </axis>
+  </joint>
+
+  <!-- <include>
+    <uri>model://spot_accessories</uri>
+    <name>spot_accessories</name>
+  </include> -->
+</model>
+</sdf>

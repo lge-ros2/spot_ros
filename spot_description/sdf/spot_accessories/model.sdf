@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<sdf version='1.7'>
+<model name='spot_accessories'>
+  <joint name="pack_mount_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="pack_mount"/>
+  </joint>
+
+  <link name="pack_mount">
+    <pose>-0.019986 0 0.093662 0 0 0</pose>
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot_accessories/meshes/pack_top.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot_accessories/meshes/pack_body.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot_accessories/meshes/pack_body.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="lidar_mount_joint" type="fixed">
+    <parent link="pack_mount"/>
+    <child link="lidar_mount"/>
+  </joint>
+
+  <link name="lidar_mount">
+  <origin xyz="0.015 0 0.149285" rpy="0 0 0"/>
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot_accessories/meshes/lidar_mount.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot_accessories/meshes/lidar_mount_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="velodyne_mount_joint" type="fixed">
+    <parent link="lidar_mount"/>
+    <child link="velodyne_mount"/>
+  </joint>
+
+  <link name="velodyne_mount">
+    <visual>
+      <geometry>
+        <mesh>
+          <uri>model://spot_accessories/meshes/velo.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh>
+          <uri>model://spot_accessories/meshes/velo_collision.stl</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="velodyne_joint" type="fixed">
+    <parent link="velodyne_mount"/>
+    <child link="velodyne"/>
+  </joint>
+
+  <link name="velodyne">
+    <pose>0 0 0.0377 0 0 0</pose>
+  </link>
+</model>
+</sdf>
