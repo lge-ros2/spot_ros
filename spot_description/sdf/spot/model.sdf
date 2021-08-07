@@ -123,7 +123,7 @@
   </joint>
 
   <link name="front_left_upper_leg">
-    <pose>0 0.110945 0.0 0 0 0</pose>
+    <pose>0.29785 0.165945 0 0 0 0</pose>
     <inertial>
       <mass>1.0</mass>
     </inertial>
@@ -171,7 +171,7 @@
   </joint>
 
   <link name="front_left_lower_leg">
-    <pose>0.025 0 -0.3205 0 0 0</pose>
+    <pose>0.32285 0.165945 -0.3205 0 0 0</pose>
     <inertial>
       <mass>0.5</mass>
     </inertial>
@@ -276,7 +276,7 @@
   </joint>
 
   <link name="front_right_upper_leg">
-    <pose>0.0 -0.110945 0.0 0 0 0</pose>
+    <pose>0.29785 -0.165945 0.0 0 0 0</pose>
     <inertial>
       <mass>1.0</mass>
     </inertial>
@@ -324,7 +324,7 @@
   </joint>
 
   <link name="front_right_lower_leg">
-    <pose>0.025 0 -0.3205 0 0 0</pose>
+    <pose>0.32285 -0.165945 -0.3205 0 0 0</pose>
     <inertial>
       <mass>0.5</mass>
     </inertial>
@@ -429,7 +429,7 @@
   </joint>
 
   <link name="rear_left_upper_leg">
-    <pose>0.0 0.110945 0.0 0 0 0</pose>
+    <pose>-0.29785 0.165945 0 0 0 0</pose>
     <inertial>
       <mass>1.0</mass>
     </inertial>
@@ -477,7 +477,7 @@
   </joint>
 
   <link name="rear_left_lower_leg">
-    <pose>0.025 0 -0.3205 0 0 0</pose>
+    <pose>-0.27285 0.165945 -0.3205 0 0 0</pose>
     <inertial>
       <mass>0.5</mass>
     </inertial>
@@ -573,7 +573,7 @@
   </joint>
 
   <link name="rear_right_upper_leg">
-    <pose>0.0 -0.110945 0.0 0 0 0</pose>
+    <pose>-0.29785 -0.165945 0.0 0 0 0</pose>
     <inertial>
       <mass>1.0</mass>
     </inertial>
@@ -621,7 +621,7 @@
   </joint>
 
   <link name="rear_right_lower_leg">
-    <pose>0.025 0 -0.3205 0 0 0</pose>
+    <pose>-0.27285 -0.165945 -0.3205 0 0 0</pose>
     <inertial>
       <mass>0.5</mass>
     </inertial>
@@ -667,6 +667,16 @@
       </dynamics>
     </axis>
   </joint>
+
+  <!-- <include>
+    <uri>model://velodyne_VLP16</uri>
+    <name>lidar</name>
+    <pose>0.15 0 0.116 0 0 0</pose>
+  </include>
+  <joint name='lidar_body_joint' type='fixed'>
+    <parent>body</parent>
+    <child>lidar::VLP-16_link</child>
+  </joint> -->
 
   <!-- <include>
     <uri>model://spot_accessories</uri>
