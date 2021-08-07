@@ -114,6 +114,11 @@
         <lower>-0.78539816339744827899</lower>
         <upper>0.78539816339744827899</upper>
       </limit>
+      <dynamics>
+        <friction>5.5</friction>
+        <damping>30</damping>
+        <spring_stiffness>50</spring_stiffness>
+      </dynamics>
     </axis>
   </joint>
 
@@ -157,6 +162,11 @@
         <lower>-0.89884456477707963539</lower>
         <upper>2.2951079663725435509</upper>
       </limit>
+      <dynamics>
+        <friction>5.5</friction>
+        <damping>30</damping>
+        <spring_stiffness>50</spring_stiffness>
+      </dynamics>
     </axis>
   </joint>
 
@@ -200,6 +210,11 @@
         <lower>-2.7929</lower>
         <upper>-0.254801</upper>
       </limit>
+      <dynamics>
+        <friction>5.5</friction>
+        <damping>30</damping>
+        <spring_stiffness>50</spring_stiffness>
+      </dynamics>
     </axis>
   </joint>
 
@@ -252,6 +267,11 @@
         <lower>-0.78539816339744827899</lower>
         <upper>0.78539816339744827899</upper>
       </limit>
+      <dynamics>
+        <friction>5.5</friction>
+        <damping>30</damping>
+        <spring_stiffness>50</spring_stiffness>
+      </dynamics>
     </axis>
   </joint>
 
@@ -295,6 +315,11 @@
         <lower>-0.89884456477707963539</lower>
         <upper>2.2951079663725435509</upper>
       </limit>
+      <dynamics>
+        <friction>5.5</friction>
+        <damping>30</damping>
+        <spring_stiffness>50</spring_stiffness>
+      </dynamics>
     </axis>
   </joint>
 
@@ -338,6 +363,11 @@
         <lower>-2.7929</lower>
         <upper>-0.247563</upper>
       </limit>
+      <dynamics>
+        <friction>5.5</friction>
+        <damping>30</damping>
+        <spring_stiffness>50</spring_stiffness>
+      </dynamics>
     </axis>
   </joint>
 
@@ -390,6 +420,11 @@
         <lower>-0.78539816339744827899</lower>
         <upper>0.78539816339744827899</upper>
       </limit>
+      <dynamics>
+        <friction>5.5</friction>
+        <damping>30</damping>
+        <spring_stiffness>50</spring_stiffness>
+      </dynamics>
     </axis>
   </joint>
 
@@ -433,6 +468,11 @@
         <lower>-0.89884456477707963539</lower>
         <upper>2.2951079663725435509</upper>
       </limit>
+      <dynamics>
+        <friction>5.5</friction>
+        <damping>30</damping>
+        <spring_stiffness>50</spring_stiffness>
+      </dynamics>
     </axis>
   </joint>
 
@@ -476,6 +516,11 @@
         <lower>-2.7929</lower>
         <upper>-0.267153</upper>
       </limit>
+      <dynamics>
+        <friction>5.5</friction>
+        <damping>30</damping>
+        <spring_stiffness>50</spring_stiffness>
+      </dynamics>
     </axis>
   </joint>
 
@@ -519,6 +564,11 @@
         <lower>-0.78539816339744827899</lower>
         <upper>0.78539816339744827899</upper>
       </limit>
+      <dynamics>
+        <friction>5.5</friction>
+        <damping>30</damping>
+        <spring_stiffness>50</spring_stiffness>
+      </dynamics>
     </axis>
   </joint>
 
@@ -562,6 +612,11 @@
         <lower>-0.89884456477707963539</lower>
         <upper>2.2951079663725435509</upper>
       </limit>
+      <dynamics>
+        <friction>5.5</friction>
+        <damping>30</damping>
+        <spring_stiffness>50</spring_stiffness>
+      </dynamics>
     </axis>
   </joint>
 
@@ -605,6 +660,11 @@
         <lower>-2.7929</lower>
         <upper>-0.257725</upper>
       </limit>
+      <dynamics>
+        <friction>5.5</friction>
+        <damping>30</damping>
+        <spring_stiffness>50</spring_stiffness>
+      </dynamics>
     </axis>
   </joint>
 
