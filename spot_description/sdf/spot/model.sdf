@@ -683,7 +683,7 @@
   </include>
   <joint name='lidar_body_joint' type='fixed'>
     <parent>body</parent>
-    <child>lidar::VLP-16_link</child>
+    <child>lidar::link</child>
   </joint> -->
 
   <!-- <include>
