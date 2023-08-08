@@ -96,7 +96,8 @@
     <collision>
       <geometry>
         <mesh>
-          <uri>model://spot/meshes/front_left_hip_collision.stl</uri>
+          <uri>model://spot/meshes/front_left_hip.dae</uri>
+          <!-- <uri>model://spot/meshes/front_left_hip_collision.stl</uri> -->
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -144,7 +145,8 @@
     <collision>
       <geometry>
         <mesh>
-          <uri>model://spot/meshes/front_left_upper_leg_collision.stl</uri>
+          <uri>model://spot/meshes/front_left_upper_leg.dae</uri>
+          <!-- <uri>model://spot/meshes/front_left_upper_leg_collision.stl</uri> -->
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -193,7 +195,8 @@
     <collision>
       <geometry>
         <mesh>
-          <uri>model://spot/meshes/front_left_lower_leg_collision.stl</uri>
+          <uri>model://spot/meshes/front_left_lower_leg.dae</uri>
+          <!-- <uri>model://spot/meshes/front_left_lower_leg_collision.stl</uri> -->
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -251,7 +254,8 @@
     <collision>
       <geometry>
         <mesh>
-          <uri>model://spot/meshes/front_right_hip_collision.stl</uri>
+          <uri>model://spot/meshes/front_right_hip.dae</uri>
+          <!-- <uri>model://spot/meshes/front_right_hip_collision.stl</uri> -->
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -299,7 +303,8 @@
     <collision>
       <geometry>
         <mesh>
-          <uri>model://spot/meshes/front_right_upper_leg_collision.stl</uri>
+          <uri>model://spot/meshes/front_right_upper_leg.dae</uri>
+          <!-- <uri>model://spot/meshes/front_right_upper_leg_collision.stl</uri> -->
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -348,7 +353,8 @@
     <collision>
       <geometry>
         <mesh>
-          <uri>model://spot/meshes/front_right_lower_leg_collision.stl</uri>
+          <uri>model://spot/meshes/front_right_lower_leg.dae</uri>
+          <!-- <uri>model://spot/meshes/front_right_lower_leg_collision.stl</uri> -->
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -406,7 +412,8 @@
     <collision>
       <geometry>
         <mesh>
-          <uri>model://spot/meshes/rear_left_hip_collision.stl</uri>
+          <!-- <uri>model://spot/meshes/rear_left_hip_collision.stl</uri> -->
+          <uri>model://spot/meshes/rear_left_hip.dae</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -454,7 +461,8 @@
     <collision>
       <geometry>
         <mesh>
-          <uri>model://spot/meshes/rear_left_upper_leg_collision.stl</uri>
+          <uri>model://spot/meshes/rear_left_upper_leg.dae</uri>
+          <!-- <uri>model://spot/meshes/rear_left_upper_leg_collision.stl</uri> -->
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -503,7 +511,8 @@
     <collision>
       <geometry>
         <mesh>
-          <uri>model://spot/meshes/rear_left_lower_leg_collision.stl</uri>
+          <!-- <uri>model://spot/meshes/rear_left_lower_leg_collision.stl</uri> -->
+          <uri>model://spot/meshes/rear_left_lower_leg.dae</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -552,7 +561,8 @@
     <collision>
       <geometry>
         <mesh>
-          <uri>model://spot/meshes/rear_right_hip_collision.stl</uri>
+          <uri>model://spot/meshes/rear_right_hip.dae</uri>
+          <!-- <uri>model://spot/meshes/rear_right_hip_collision.stl</uri> -->
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -600,7 +610,8 @@
     <collision>
       <geometry>
         <mesh>
-          <uri>model://spot/meshes/rear_right_upper_leg_collision.stl</uri>
+          <uri>model://spot/meshes/rear_right_upper_leg.dae</uri>
+          <!-- <uri>model://spot/meshes/rear_right_upper_leg_collision.stl</uri> -->
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -649,7 +660,8 @@
     <collision>
       <geometry>
         <mesh>
-          <uri>model://spot/meshes/rear_right_lower_leg_collision.stl</uri>
+          <uri>model://spot/meshes/rear_right_lower_leg.dae</uri>
+          <!-- <uri>model://spot/meshes/rear_right_lower_leg_collision.stl</uri> -->
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
